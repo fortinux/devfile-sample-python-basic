@@ -10,20 +10,20 @@ import os
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    return "Hola Mundo!"
+def home():
+    return render_template("index.html")
 
 @app.route("/servicios")
 def servicios():
-    return "<H1>Esta es la página de servicios</H1>"
+    return render_template("base.html")
 
 @app.route("/contacto")
 def contacto():
-    return "<H1>Esta es la página de contacto</H1>"
+    return render_template("base.html")
 
 @app.route("/admin")
 def admin():
-    return "<H1>Esta es la página de admin</H1>"    
+    return render_template("base.html")    
 
 if __name__ == '__main__':
     port = os.environ.get('FLASK_PORT') or 8080
