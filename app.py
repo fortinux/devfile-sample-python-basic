@@ -10,8 +10,8 @@ import os
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    return "Hola Mundo!"
+def index():
+    return render_template("index.html")
 
 @app.route("/servicios")
 def servicios():
